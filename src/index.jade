@@ -1,0 +1,17 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+  .container
+      h1.title
+        | Mostly<br>Unimpressed
+      p Mostly Unimpressed is a 5-second review podcast by Ari Zilnik.
+      h2 Latest episodes
+      iframe.player(height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/257090189&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+      h2 Subscribe for more
+      .ctas
+        a(href='https://itunes.apple.com/us/podcast/mostly-unimpressed-5-second-reviews/id1158607467?mt=2')
+          img.cta(src='./images/iTunes.svg')
+        a(href='https://play.google.com/music/listen#/ps/Ipfd57kzoldkl6or4v25bvrvbeq')
+          img.cta(src='./images/Play.svg')

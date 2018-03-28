@@ -1,0 +1,68 @@
+// Normalize Styles
+@import '../../node_modules/normalize.css/normalize.css';
+
+// Import Modules
+@import '../_modules/link/link';
+
+// Box sizing partial styles
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+body-text = 'Open Sans', sans-serif
+header-text = 'Nunito', sans-serif
+base = 8
+dark-color = black
+light-color = #f8f8f5
+my-padding = (base)pt (base*2)pt (base)pt (base*2)pt
+
+html, body
+  width 100%
+  height 100%
+  background-color light-color
+.container
+  // width (base*10)%
+  margin 0 0 (base*4)pt 0
+  display flex
+  flex-direction column
+  align-items center
+  h1
+    font-family header-text
+    font-size (base*8)pt
+    color dark-color
+    font-weight 900
+    &.title
+      transform rotate(-8deg)
+      text-transform uppercase
+      @media screen and (max-width: 670px)
+        font-size (base*1.5)vw
+  h2
+      font-family header-text
+      padding my-padding
+  p
+    font-family body-text
+    color dark-color
+    padding my-padding
+  .player
+    padding my-padding
+    width 100%
+    max-width (base*80)pt
+  .ctas
+    display flex
+    flex-direction row
+    max-width 80%
+    justify-content space-around
+    @media (max-width:670px)
+      flex-direction column
+      width 90%
+      max-width 200pt
+    .cta
+      height 48pt
+      padding (base)pt
+      @media (max-width:670px)
+        height auto
+        width 100%
